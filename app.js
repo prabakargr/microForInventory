@@ -62,4 +62,6 @@ if(!isProduction) {
     });
   });
 
-app.listen(8001, () => console.log('Server running on http://localhost:8001/'));
+  var port=process.env.PORT || (8001);
+
+  app.listen(port, () => console.log(`Running on localhost:8001`));
