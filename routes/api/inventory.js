@@ -53,4 +53,9 @@ router.post('/reduceQty',(req,res,next)=>{
         
     })
 })
+router.get('/get',(req,res,next)=>{
+    Inventory.find().then((data)=>{
+        res.json(data)
+    }).catch(next)
+})
 module.exports=router
